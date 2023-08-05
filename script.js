@@ -10,7 +10,6 @@ let m = 60 * s
 let hh = 60 * m
 let dd = 24 * hh
 const coundown = (e) => {
-    e.preventDefault()
     let now = new Date();
     let date = String(now.getDate()).padStart(2, "0")
     let month = String(now.getMonth() + 1).padStart(2, "0")
