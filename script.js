@@ -9,13 +9,13 @@ let s = 1000
 let m = 60 * s
 let hh = 60 * m
 let dd = 24 * hh
-const coundown = () => {
+const coundown = (e) => {
+    e.preventDefault()
     let now = new Date();
     let date = String(now.getDate()).padStart(2, "0")
     let month = String(now.getMonth() + 1).padStart(2, "0")
     let yy = now.getFullYear()
     now = `${month}/${date}/${yy}`
-    console.log(now);
 
     let userDate = prompt("Enter Day").padStart(2, "0")
     let userMonth = prompt("Enter Month").padStart(2, "0")
